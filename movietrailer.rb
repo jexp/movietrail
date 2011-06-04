@@ -1,6 +1,5 @@
 require 'rubygems'
 require 'uri'
-require 'twitter'
 require 'json'
 require 'rest-client'
 
@@ -12,5 +11,10 @@ module MovieTrailer
 
     def initialize
     end
-  end
+
+		def timeline
+			"johannes war hier!"
+		end
+
+	end
 end
