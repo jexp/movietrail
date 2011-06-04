@@ -1,0 +1,42 @@
+<html>
+<head>
+	<title>MovieTrail</title>
+</head>
+<body>
+<div id="map"></div>
+<script type="text/javascript" src="OpenLayers.js"></script>
+<script type="text/javascript" src="Animation.js"></script>
+<script type="text/javascript">
+var map = new OpenLayers.Map("map"),
+osm = new OpenLayers.Layer.OSM("OSM");
+map.addLayer(osm);	
+map.setBaseLayer(osm);
+map.zoomTo(2);
+var displayPlaces = function(places) {
+	var i = 0, length = places.length, place, point,
+		layer = new OpenLayers.Layer.Vector();
+	for (; i < length; i++) {
+		place = places[i];
+		place = new OpenLayers.LonLat(place.longitude, place.latitude).transform(
+                    new OpenLayers.Projection("EPSG:4326"),
+                    map.getProjectionObject()
+                );
+		point = new OpenLayers.Geometry.Point(place.lon, place.lat);
+		layer.addFeatures([new OpenLayers.Feature.Vector(point)]);
+	}
+	map.addLayer(layer);
+};
+var request = new OpenLayers.Request.GET({
+	url: "../places.json",
+	success: function(response) {
+		var json = JSON.parse(response.responseText),
+			places = [];
+		for (place in json) {
+			places.push(json[place]);
+		}
+		displayPlaces(places);
+	}
+});
+</script>
+</body>
+</html>

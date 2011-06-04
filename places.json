@@ -1,7 +1,22 @@
-[
-	{
+{
+"fort_knox": {
 	"name": "Fort Knox",
-	"longitude":85.963629,
+	"longitude":-85.963629,
 	"latitude":37.891129
+	},
+"andermatt": {
+	"name":"Andermatt, Uri, Switzerland",
+	"longitude":8.59388,
+	"latitude":46.63565
+	},
+"big_ben": {
+	"name":"Big Ben, Houses of Parliament, Westminster, London, England, UK",
+	"longitude":-0.12496,
+	"latitude":51.49971
+	},
+"burnham_beeches": {
+	"name":"Burnham Beeches, Buckinghamshire, England, UK",
+	"longitude":-0.6477,
+	"latitude":51.5414
 	}
-]
+}
