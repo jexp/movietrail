@@ -36,10 +36,10 @@ module MovieTrail
   end
 
   class Scene
-    attr_accessor :minute, :text, :people, :places, :times
+    attr_accessor :time, :text, :people, :places, :times
 
-    def initialize(minute, text)
-      self.minute = minute
+    def initialize(time, text)
+      self.time = time
       self.text = text
       analyzer = Analyzer.new(text)
       self.people = analyzer.people
@@ -48,7 +48,7 @@ module MovieTrail
     end
 
     def to_s
-      "#{minute}: People #{people.join(', ')} Places: #{places} Times: #{times}"
+      "#{time}: People #{people.join(', ')} Places: #{places} Times: #{times}"
     end
   end
 end
