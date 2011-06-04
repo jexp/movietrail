@@ -9,13 +9,13 @@ module MovieTrail
     attr_accessor :scenes
 
     def initialize
-      self.scenes = load
+      @@scenes ||= load
     end
 
     TIMELINE = JSON.parse(IO.read("trail.json"))
 
 		def timeline
-		  self.scenes.find_all { |scene| scene.place }.collect { |scene| { :time => scene.minute, :place => scene.place, :people => scene.people }}
+		  @@scenes.find_all { |scene| scene.place }.collect { |scene| { :time => scene.minute, :place => scene.place, :people => scene.people }}
 		end
 
     def load

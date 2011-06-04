@@ -10,7 +10,7 @@ class App < Sinatra::Base
   include MovieTrail
   
   before do
-    @trail ||= MovieTrail.new
+    @trail = MovieTrail.new
   end
 
   get '/' do
