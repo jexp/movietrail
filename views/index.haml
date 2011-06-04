@@ -27,12 +27,18 @@
         feature.data = times[i];
         layer.addFeatures([feature]);
       }
-    }
-    var animation = new OpenLayers.Control.Animation(layer, {
+    };
+    var ele,
+    animation = new OpenLayers.Control.Animation(layer, {
       delay: 100,
       onShow: function(feature) {
-        console.log(feature.data.time);
-      }
+        if (ele) {
+          ele.setAttribute("style", "");
+        }
+        ele = document.getElementById("minute-" + feature.data.time);
+        ele.setAttribute("style", "background-color:red;");
+      },
+      loop: true
     });
     map.addControl(animation);
     map.addLayers([layer]);
