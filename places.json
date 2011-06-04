@@ -1,50 +1,60 @@
 {
 "fort_knox": {
+	"keywords" : ["knox","fort knox"],
 	"name": "Fort Knox",
 	"longitude":-85.963629,
 	"latitude":37.891129
 	},
 "andermatt": {
+	"keywords" : ["andermatt","uri"],
 	"name":"Andermatt, Uri, Switzerland",
 	"longitude":8.59388,
 	"latitude":46.63565
 	},
 "big_ben": {
+	"keywords" : ["big ben","parliament","westminster","london"],
 	"name":"Big Ben, Houses of Parliament, Westminster, London, England, UK",
 	"longitude":-0.12496,
 	"latitude":51.49971
 	},
 "burnham_beeches": {
+	"keywords" : ["burnham beeches","beeches","burnham","buckinghamshire"],
 	"name":"Burnham Beeches, Buckinghamshire, England, UK",
 	"longitude":-0.6477,
 	"latitude":51.5414
 	},
 "simplon_tunnel": {
+	"keywords" : ["simplon","tunnel","Lepontine"],
 	"name":"Simplon Tunnel, Lepontine Alps, Switzerland",
 	"longitude":8.01667,
 	"latitude":46.31667
 	},
 "rhone_glacier": {
+	"keywords" : ["Rhone Glacier","Glacier","Rhone"],
 	"name":"Rhone Glacier, Swiss Alps, Switzerland",
 	"longitude":8.4216,
 	"latitude":46.6443
 	},
 "southend_airport": {
+	"keywords" : ["Southend Airport","Southend", "Essex","Rochford"],
 	"name":"Southend Airport, Rochford, Essex, England, UK",
 	"longitude":0.69556,
 	"latitude":51.57139
 	},
 "stanwell": {
+	"keywords" : ["Stanwell", "Middlesex"],
 	"name":"Stanwell, Middlesex, England, UK",
 	"longitude":-0.47812,
 	"latitude":51.45414
 	},
 "washington": {
+	"keywords" : ["Washington", "DC"],
 	"name":"Washington, District of Columbia, USA",
 	"longitude":-77.00025,
 	"latitude":38.91706
 	},
 "stoke_poges": {
+	"keywords" : ["Stoke Poges","Stoke", "Poges", "Buckinghamshire"],
 	"name":"Stoke Poges, Buckinghamshire, England, UK",
 	"longitude":-0.5888,
 	"latitude":51.54441

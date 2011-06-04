@@ -16,8 +16,11 @@ CAST = {
 :simmons => ["Simmons"],
 :tilly => ["Tilly Masterson","Tilly"]}
 
+puts CAST.to_json
+
+
 PLACES = JSON.parse(IO.read("places.json"))
-PLACE_NAMES = Hash[JSON.parse(IO.read("places.json")).collect { |name, data| [name, [data['name']]+data['name'].split(/ /) ]}]
+PLACE_NAMES = Hash[JSON.parse(IO.read("places.json")).collect { |name, data| [name, data['keywords']]}]
 
 class Scene
   attr_accessor :minute, :text, :people, :places
@@ -34,28 +37,10 @@ class Scene
     self.text = text
     lctext = self.text.downcase
     self.people = scan_text_for(lctext, CAST)
-    self.places = scan_text_for(lctext, PLACE_NAMES)
+    self.places = scan_text_for(lctext, PLACE_NAMES).first
   end
   
   def to_s
-    "#{minute}: People #{people.join(', ')} Places: #{places.join(', ')}"
+    "#{minute}: People #{people.join(', ')} Places: #{places}"
   end
-end
-
-scene_text = ""
-timeline = []
-
-File.open("GOLDFINGER.txt", "r") do |infile|
-    while (line = infile.gets)
-      if line =~ /----(\d+)\./
-        if !scene_text.empty?
-          scene = Scene.new($1,scene_text)
-          puts scene
-          timeline << scene
-        end
-        scene_text = ""
-      else
-        scene_text += line
-      end
-    end
 end
