@@ -14,7 +14,7 @@ body{
 	background-color:#57575d;
 
 	/* Multiple backgrounds */
-	background:url('/img/bg_vert.jpg') repeat-x,url('/img/bg_tile.jpg');
+	background:url('/img/map/bg_vert.jpg') repeat-x,url('/img/map/bg_tile.jpg');
 }
 
 a {
