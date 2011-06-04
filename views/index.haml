@@ -6,21 +6,24 @@
   map.addLayer(osm);	
   map.setBaseLayer(osm);
   var displayTimeline = function(times) {
-    var i = 0, length = times.length, place, point, feature,
+    var i = 0, length = times.length, place, point, points, feature,
     layer = new OpenLayers.Layer.Vector();
     for (; i < length; i++) {
-      place = places[times[i].place];
-      if (!place) {
+      place = places[times[i].places];
+      times[i].places = place;
+      if (!place || 0 == place.length) {
         feature = new OpenLayers.Feature();
         feature.data = times[i];
         layer.addFeatures([feature]);
       } else {
-        place = new OpenLayers.LonLat(place.longitude, place.latitude).transform(
+        points = [];
+        point = new OpenLayers.LonLat(place.latitude, place.longitude).transform(
           new OpenLayers.Projection("EPSG:4326"),
           map.getProjectionObject()
         );
-        point = new OpenLayers.Geometry.Point(place.lon, place.lat);
-        feature = new OpenLayers.Feature.Vector(point);
+        point = new OpenLayers.Geometry.Point(point.lon, point.lat);
+        points.push(point);
+        feature = new OpenLayers.Feature.Vector(new OpenLayers.Geometry.MultiPoint(points));
         feature.data = times[i];
         layer.addFeatures([feature]);
       }
