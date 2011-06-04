@@ -1,20 +1,20 @@
 require 'rubygems'
 require 'sinatra/base'
 require 'uri'
-require 'movietrailer'
+require 'movietrail'
 
 class App < Sinatra::Base
   set :haml, :format => :html5 
   set :app_file, __FILE__
 
-  include MovieTrailer
+  include MovieTrail
 
   before do
-    @trailer = MovieTrailer.new
+    @trail = MovieTrail.new
   end
 
   get '/' do
-    @timeline = @trailer.timeline
+    @timeline = @trail.timeline
     haml :index
   end
 end

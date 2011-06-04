@@ -2,13 +2,10 @@ require 'rubygems'
 require 'uri'
 require 'json'
 require 'rest-client'
+require 'movietrail/domain'
 
-
-module MovieTrailer
-
-
-  class MovieTrailer
-
+module MovieTrail
+  class MovieTrail
     def initialize
     end
 
