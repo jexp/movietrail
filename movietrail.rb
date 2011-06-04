@@ -15,7 +15,7 @@ module MovieTrail
     TIMELINE = JSON.parse(IO.read("trail.json"))
 
 		def timeline
-		  @@scenes.find_all { |scene| scene.place }.collect { |scene| { :time => scene.minute, :place => scene.place, :people => scene.people }}
+		  @@scenes.collect { |scene| { :time => scene.minute, :place => scene.place, :people => scene.people }}
 		end
 
     def load

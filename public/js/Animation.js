@@ -37,6 +37,8 @@ OpenLayers.Control.Animation = OpenLayers.Class(OpenLayers.Control, {
 	 */
 	delay: 1,
 
+	onShow: function(feature) { },
+
 	/**
 	 * Constructor: OpenLayers.Control.Animation
 	 * Create a new control to animate a vector layer.
@@ -61,6 +63,7 @@ OpenLayers.Control.Animation = OpenLayers.Class(OpenLayers.Control, {
 		var i = 0, that = this;
 		this.layer.removeAllFeatures();
 		var animation = setInterval(function() {
+			that.onShow(that.features[i]);
 			that.layer.addFeatures(that.features[i]);
 			if (!that.features[i+1]) {
 				if (that.loop) {
@@ -71,7 +74,7 @@ OpenLayers.Control.Animation = OpenLayers.Class(OpenLayers.Control, {
 				}
 			}
 			i++;
-		}, this.speed);
+		}, this.delay);
 	},
 
 	CLASS_NAME: "OpenLayers.Control.Animation"
