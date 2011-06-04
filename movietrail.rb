@@ -5,7 +5,6 @@ require 'rest-client'
 require 'movietrail/domain'
 require 'movietrail/events'
 
-
 module MovieTrail
   class MovieTrail
     attr_accessor :scenes

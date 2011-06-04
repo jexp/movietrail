@@ -1,24 +1,29 @@
 module MovieTrail
   class Event
     @@id = 0
-    attr_accessor :type, :key, :data, :places, :times, :id
-    def initialize(type, key)
+    # type = actor, movie
+    # crew = name , camera, cut, action
+    # content
+    # content_type
+    attr_accessor :type, :crew, :content,:content_type, :places, :times, :id
+    def initialize(type, crew)
       self.type = type
-      self.key = key
-      self.data = []
+      self.crew = crew
       self.id = @@id
       @@id+=1
     end
     
-    def add(type, text)
-      data << {type => text}
-      analyzer = Analyzer.new(text)
-      self.places = (self.places||[]) << analyzer.places
-      self.times = (self.times||[]) << analyzer.times
+    def add(content, content_type = nil)
+      self.content = content
+      self.content_type = content_type
+      analyzer = Analyzer.new(content)
+      self.places =  analyzer.places
+      self.times = analyzer.times
+      self
     end
 
     def to_s 
-      "#{key} : #{data.inspect} #{self.places} #{self.times}"
+      "#{type} @#{crew} #{content} #{self.places} #{self.times}"
     end
   end
 
@@ -38,10 +43,14 @@ module MovieTrail
             type = $1
             text = $2
             if type =~ /ACTOR/ || type =~ /CAMERA/ || type =~ /CUT/ || type =~ /ACTION/
-              timeline << event unless event.nil?
-              event = Event.new(type, text)
+              if type =~ /ACTOR/ 
+                event = Event.new('ACTOR' , text)
+              else
+                timeline << Event.new('MOVIE' , type).add(text)
+              end
             else
-              event.add(type,text)
+              timeline << event.add(text,type)
+              event = Event.new(event.type,event.crew)
             end
           end
         end

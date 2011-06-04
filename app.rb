@@ -24,7 +24,7 @@ class App < Sinatra::Base
   end
   
   get '/events.json' do 
-    @trail.events(nil).collect{ |e| {:id => e.id, :type => e.type, :key => e.key }}.to_json
+    @trail.events(nil).collect{ |e| {:id => e.id, :type => e.type, :crew => e.crew, :content => e.content, :content_type => e.content_type, :times => e.times, :places => e.places }}.to_json
   end
   
   get '/timeline' do
