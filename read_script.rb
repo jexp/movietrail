@@ -1,6 +1,8 @@
+require 'rubygems'
 require 'fileutils'
+require 'json'
 
-cast = {
+CAST = {
 :goldfinger => ["Auric Goldfinger","Auric","Goldfinger"],
 :leiter => ["Felix Leiter","Felix", "Leiter"],
 :bond => ["James Bond","James","Bond"],
@@ -14,33 +16,42 @@ cast = {
 :simmons => ["Simmons"],
 :tilly => ["Tilly Masterson","Tilly"]}
 
-places = {}
+PLACES = JSON.parse(IO.read("places.json"))
+PLACE_NAMES = Hash[JSON.parse(IO.read("places.json")).collect { |name, data| [name, [data['name']]+data['name'].split(/ /) ]}]
 
-timeline = []
 class Scene
-  attr_accessor :minute, :text, :people, :location
-  def initialize(_minute, _text)
-    minute = _minute
-    text = _text
-    people = cast.collect do |name, tokens | 
-      regexp = "("+tokens.collect {|t| t.downcase }.join("|")+")"
-      _text.downcase =~ regexp ? name : nil
-    end.find_all { |i| !i.nil? }
+  attr_accessor :minute, :text, :people, :places
+
+  def scan_text_for(text,what)
+    what.collect do |name, tokens | 
+      regexp = Regexp.new '\b('+tokens.collect {|t| t.downcase }.join("|")+')\b'
+      regexp.match(text).nil? ? nil : name
+    end.find_all { |i| !(i.nil?) }.uniq
   end
+  
+  def initialize(minute, text)
+    self.minute = minute
+    self.text = text
+    lctext = self.text.downcase
+    self.people = scan_text_for(lctext, CAST)
+    self.places = scan_text_for(lctext, PLACE_NAMES)
+  end
+  
   def to_s
-    "#{minute}: #{people}"
+    "#{minute}: People #{people.join(', ')} Places: #{places.join(', ')}"
   end
 end
 
 scene_text = ""
-scenes = []
+timeline = []
+
 File.open("GOLDFINGER.txt", "r") do |infile|
     while (line = infile.gets)
       if line =~ /----(\d+)\./
         if !scene_text.empty?
           scene = Scene.new($1,scene_text)
           puts scene
-          scenes << scene
+          timeline << scene
         end
         scene_text = ""
       else
