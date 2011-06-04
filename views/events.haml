@@ -1,0 +1,23 @@
+- index = 0
+.content-wrapper
+  .content-wrapper-inner
+    .movie
+      .movie-poster
+      .movie-details
+        .movie-title
+          = 'Goldfinger'
+    - @events.each do |e|
+      -if e.type == 'ACTOR'
+        .stream-item
+          .crew-image
+          .stream-content
+            .crew
+              = e.crew
+              %span.place= e.places.first
+              %span.time= e.times
+            .content
+              = e.content
+  #infoboard
+    .info-item
+      = 'Info-Inhalt'
+            
