@@ -6,20 +6,21 @@ require 'movietrail/domain'
 
 module MovieTrail
   class MovieTrail
-    attr_accessor :timeline
+    attr_accessor :scenes
 
     def initialize
-      self.timeline = load
+      self.scenes = load
     end
 
     TIMELINE = JSON.parse(IO.read("trail.json"))
+
 		def timeline
-			TIMELINE
+		  self.scenes.find_all { |scene| scene.place }.collect { |scene| { :time => scene.minute, :place => scene.place, :people => scene.people }}
 		end
 
     def load
       scene_text = ""
-      timeline = []
+      scenes = []
 
       File.open("GOLDFINGER.txt", "r") do |infile|
         while (line = infile.gets)
@@ -27,7 +28,7 @@ module MovieTrail
             if !scene_text.empty?
               scene = Scene.new($1,scene_text)
               puts scene
-              timeline << scene
+              scenes << scene
             end
             scene_text = ""
           else
@@ -35,7 +36,7 @@ module MovieTrail
           end
         end
       end
-      timeline
+      scenes
     end
 	end
 end

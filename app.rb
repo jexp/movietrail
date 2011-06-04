@@ -6,11 +6,11 @@ require 'movietrail'
 class App < Sinatra::Base
   set :haml, :format => :html5 
   set :app_file, __FILE__
-
+  
   include MovieTrail
-  @trail = MovieTrail.new
-
+  
   before do
+    @trail ||= MovieTrail.new
   end
 
   get '/' do
