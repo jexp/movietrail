@@ -1,9 +1,9 @@
 require 'movietrail/node_ext'
 
 module MovieTrail
-  CAST = JSON.parse(IO.read("cast.json"))
-  PLACES = JSON.parse(IO.read("places.json"))
-  PLACE_NAMES = Hash[JSON.parse(IO.read("places.json")).collect { |name, data| [name, data['keywords']]}]
+  CAST = JSON.parse(IO.read("public/cast.json"))
+  PLACES = JSON.parse(IO.read("public/places.json"))
+  PLACE_NAMES = Hash[PLACES.collect { |name, data| [name, data['keywords']]}]
 
   class Scene
     attr_accessor :minute, :text, :people, :places
