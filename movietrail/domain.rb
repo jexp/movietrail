@@ -6,7 +6,7 @@ module MovieTrail
   PLACE_NAMES = Hash[PLACES.collect { |name, data| [name, data['keywords']]}]
 
   class Scene
-    attr_accessor :minute, :text, :people, :places
+    attr_accessor :time, :text, :people, :places
 
     def scan_text_for(text,what)
       what.collect do |name, tokens | 
@@ -15,8 +15,8 @@ module MovieTrail
       end.find_all { |i| !(i.nil?) }.uniq
     end
 
-    def initialize(minute, text)
-      self.minute = minute
+    def initialize(time, text)
+      self.time = time
       self.text = text
       lctext = self.text.downcase
       self.people = scan_text_for(lctext, CAST)
@@ -24,7 +24,7 @@ module MovieTrail
     end
 
     def to_s
-      "#{minute}: People #{people.join(', ')} Places: #{places}"
+      "#{time}: People #{people.join(', ')} Places: #{places}"
     end
   end
 end

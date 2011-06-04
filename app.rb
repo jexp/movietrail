@@ -13,17 +13,17 @@ class App < Sinatra::Base
     @trail = MovieTrail.new
   end
 
-  get '/' do
-    @timeline = @trail.timeline.to_json
+		get '/' do
+			@timeline = @trail.timeline
     haml :index
   end
   
   get '/timeline' do
-    @trail.timeline.collect { |scene| { :time => scene.minute, :places => scene.places, :people => scene.people }}.to_json
+    @trail.timeline.collect { |scene| { :time => scene.time, :places => scene.places, :people => scene.people }}.to_json
   end
 
   get '/timeline/:id' do |id|
     scene = @trail.scene(id.to_i)
-    { :time => scene.minute, :places => scene.places, :text => scene.text, :people => scene.people }.to_json
+    { :time => scene.time, :places => scene.places, :text => scene.text, :people => scene.people }.to_json
   end
 end

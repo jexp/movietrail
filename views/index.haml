@@ -53,15 +53,15 @@
   });
 
 - index = 0
-- JSON.parse(@timeline).each do |scene|
-  - if scene["time"].to_i > (index * 60)
+- @timeline.each do |scene|
+  - if scene.time.to_i > (index * 60)
     .timeline
     - index = index + 1
-  - time = scene["time"]
-  - people = scene["people"]
-  - place = scene["place"]
+  - time = scene.time
+  - people = scene.people
+  - places = scene.places
   %div{:id => "minute-#{time}"}
-    %span=place
+    %span=places.join(", ")
     %span=time
     %ul
       - if people.any?
