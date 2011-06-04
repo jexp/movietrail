@@ -18,5 +18,35 @@
 	"name":"Burnham Beeches, Buckinghamshire, England, UK",
 	"longitude":-0.6477,
 	"latitude":51.5414
+	},
+"simplon_tunnel": {
+	"name":"Simplon Tunnel, Lepontine Alps, Switzerland",
+	"longitude":8.01667,
+	"latitude":46.31667
+	},
+"rhone_glacier": {
+	"name":"Rhone Glacier, Swiss Alps, Switzerland",
+	"longitude":8.4216,
+	"latitude":46.6443
+	},
+"southend_airport": {
+	"name":"Southend Airport, Rochford, Essex, England, UK",
+	"longitude":0.69556,
+	"latitude":51.57139
+	},
+"stanwell": {
+	"name":"Stanwell, Middlesex, England, UK",
+	"longitude":-0.47812,
+	"latitude":51.45414
+	},
+"washington": {
+	"name":"Washington, District of Columbia, USA",
+	"longitude":-77.00025,
+	"latitude":38.91706
+	},
+"stoke_poges": {
+	"name":"Stoke Poges, Buckinghamshire, England, UK",
+	"longitude":-0.5888,
+	"latitude":51.54441
 	}
 }
