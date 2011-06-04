@@ -3,6 +3,8 @@ require 'uri'
 require 'json'
 require 'rest-client'
 require 'movietrail/domain'
+require 'movietrail/events'
+
 
 module MovieTrail
   class MovieTrail
@@ -10,6 +12,7 @@ module MovieTrail
 
     def initialize
       @@scenes ||= load
+      @@events ||= Events.load
     end
 
     TIMELINE = JSON.parse(IO.read("trail.json"))
@@ -17,6 +20,13 @@ module MovieTrail
 		def timeline
 		  @@scenes
 		end
+		
+		def events(id)
+       @@events.events(id)
+	  end
+    def event_count
+      @@events.count
+    end
 		
 		def scene(id)
       @@scenes[id]
