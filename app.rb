@@ -14,7 +14,7 @@ class App < Sinatra::Base
   end
 
   get '/' do
-    @timeline = @trail.timeline
+    @timeline = @trail.timeline.to_json
     haml :index
   end
   
