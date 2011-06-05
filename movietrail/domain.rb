@@ -10,6 +10,55 @@ module MovieTrail
   TIMES = { :day => ["day","daylight","morning","breakfast",'0?[7-9]:\d\d','1[0-2]:\d\d',"sunrise","lunch","afternoon"],
     :night => ["midnight","night","dark","moon","stars","diner","supper","sunset"]}
 
+  class Movie
+    attr_accessor :title, :id, :scenes, :all_events
+    
+    def timeline
+		  self.scenes
+		end
+		
+		def events(id=nil)
+       self.all_events.events(id)
+	  end
+
+    def event_count
+      self.all_events.count
+    end
+		
+		def scene(id)
+      self.scenes[id]
+	  end
+	  
+	  def self.load_scenes(name)
+      scene_text = ""
+      scenes = []
+
+      File.open("#{name}.scenes", "r") do |infile|
+        while (line = infile.gets)
+          if line =~ /----(\d+)\./
+            if !scene_text.empty?
+              scene = Scene.new($1,scene_text)
+              scenes << scene
+            end
+            scene_text = ""
+          else
+            scene_text += line
+          end
+        end
+      end
+      scenes
+    end
+    
+	  def self.load(id, name)
+      movie = Movie.new
+      movie.id = id
+      movie.title = name
+      movie.scenes = Movie.load_scenes(name)
+      movie.all_events = Events.load(name)
+      movie
+    end
+  end
+  
   class Analyzer
     
     def initialize(text)

@@ -84,11 +84,11 @@ module MovieTrail
       puts events.count
     end
 
-    def self.load
+    def self.load(name)
       timeline = []
       env = Environment.new
       event = nil
-      File.open("GOLDFINGER2.txt", "r") do |infile|
+      File.open("#{name}.events", "r") do |infile|
         while (line = infile.gets)
           if line =~ /^(ACTION|EMOTION|ACTOR|CAMERA|CUT|SPEECH)# (.+)/
             type = $1

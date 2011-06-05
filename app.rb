@@ -24,37 +24,38 @@ class App < Sinatra::Base
       end
     end
 
-	get '/' do
-		@timeline = @trail.timeline
+	get '/:movie' do |movie|
+		@timeline = @trail.timeline(movie)
     haml :index
   end
 
-  get '/events' do
+  get '/events/:movie' do |movie|
     @cast = CAST
-    @events = @trail.events(nil)
+    @events = @trail.events(movie, nil)
     haml :events
   end
   
   BASE_URL = "http://movietrail.heroku.com"
 
-  get '/events.rss' do
+  get '/events.rss/:movie' do |movie|
     content_type 'application/rss+xml'
 
     @cast = CAST
-    @events = @trail.events(params[:id])
+    @movie = @trail.movie(movie)
+    @events = @movie.events(params[:id])
     haml(:rss, :format => :xhtml, :escape_html => true, :layout => false)
   end
   
-  get '/events.json' do 
-    @trail.events(nil).collect{ |e| {:id => e.id, :type => e.type, :crew => e.crew, :content => e.content, :content_type => e.content_type, :times => e.times, :places => e.places, :people => e.people }}.to_json
+  get '/events.json/:movie' do |movie|
+    @trail.events(movie,nil).collect{ |e| {:id => e.id, :type => e.type, :crew => e.crew, :content => e.content, :content_type => e.content_type, :times => e.times, :places => e.places, :people => e.people }}.to_json
   end
   
-  get '/timeline' do
-    @trail.timeline.collect { |scene| { :time => scene.time, :places => scene.places, :people => scene.people, :times => scene.times }}.to_json
+  get '/timeline/:movie' do |movie|
+    @trail.timeline(movie).collect { |scene| { :time => scene.time, :places => scene.places, :people => scene.people, :times => scene.times }}.to_json
   end
 
-  get '/timeline/:id' do |id|
-    scene = @trail.scene(id.to_i)
+  get '/timeline/:movie/:id' do |movie,id|
+    scene = @trail.scene(movie, id.to_i)
     { :time => scene.time, :places => scene.places, :text => scene.text, :people => scene.people, :times => scene.times }.to_json
   end
 end
