@@ -1,9 +1,9 @@
 !!! XML
 %rss{:version => "2.0", "xmlns:atom" => "http://www.w3.org/2005/Atom"}
     %channel
-        %title Goldfinger
-        %link= BASE_URL+"/events"
-        %description James Bond Goldfinger movie
+        %title=@movie.title
+        %link= BASE_URL+"/events/#{@movie.id}"
+        %description @movie.title
         <atom:link href="http://movietrail.heroku.com/events" rel="self" type="application/rss+xml" />
         - @events.each do |e|
             %item

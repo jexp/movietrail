@@ -7,48 +7,32 @@ require 'movietrail/events'
 
 module MovieTrail
   class MovieTrail
-    attr_accessor :scenes
-
+    @@movies = {}
+    MOVIE_FILES = { "1" => "GOLDFINGER", "2" => "forrest_gump"}
     def initialize
-      @@scenes ||= load
-      @@events ||= Events.load
     end
 
-    TIMELINE = JSON.parse(IO.read("trail.json"))
-
-		def timeline
-		  @@scenes
+    def movie(id)
+      raise "Unknown Movie #{id}" unless MOVIE_FILES[id]
+      unless @@movies[id]
+        @@movies[id]=Movie.load(id,MOVIE_FILES[id])
+      end
+      @@movies[id]
+    end
+    
+		def timeline(movie_id)
+		  movie(movie_id).timeline
 		end
 		
-		def events(id)
-       @@events.events(id)
+		def events(movie_id,id)
+		   movie(movie_id).events(id)
 	  end
     def event_count
-      @@events.count
+      movie(movie_id).event_count
     end
 		
-		def scene(id)
-      @@scenes[id]
+		def scene(movie_id, id)
+      movie(movie_id).scene(id)
 	  end
-
-    def load
-      scene_text = ""
-      scenes = []
-
-      File.open("GOLDFINGER.txt", "r") do |infile|
-        while (line = infile.gets)
-          if line =~ /----(\d+)\./
-            if !scene_text.empty?
-              scene = Scene.new($1,scene_text)
-              scenes << scene
-            end
-            scene_text = ""
-          else
-            scene_text += line
-          end
-        end
-      end
-      scenes
-    end
 	end
 end
