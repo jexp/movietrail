@@ -18,7 +18,7 @@ new OpenLayers.Request.GET({
 	url: "../places.json",
 	success: function(response) {
 		places = JSON.parse(response.responseText);
-//		startAnimation();
+		startAnimation();
 	}
 });
 
@@ -27,6 +27,7 @@ var selectedElement = null, offsetTop = 0;
 var showItem = function(ele) {
 	ele.removeClass('night');
 	var place = ele.find('.place').text().trim();
+	//clearInterval(animation);
 	if ('' != place) {
 		place = places[place];
 		layer.removeAllFeatures();
@@ -39,6 +40,7 @@ var showItem = function(ele) {
 		layer.addFeatures([feature]);
 	}
 	$("#infoboard .info-item").html(ele);
+	$("#screenshot-image").attr("src", "/img/james-bond-007-goldfinger/" + Math.floor(ele[0].id / 10) +".jpg");
 }
 $(".stream-item").click(function() {
 	if (null != selectedElement){
@@ -60,5 +62,5 @@ var startAnimation = function() {
 			clearInterval(animation);
 		}
 		animationIndex++;
-	}, 100);
+	}, 1000);
 }
