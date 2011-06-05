@@ -133,6 +133,9 @@ body{
 	    padding: 8px 14px 12px;
 	    text-shadow: 0 1px 0 #FFFFFF;
 }
+#infoboard .info-item {
+	height: 150px;
+}
 .selected {
 	background-color: red;
 }
@@ -156,12 +159,11 @@ body{
 }
 /* timeline */
 #map{
-	height: 500px;
-	width: 960px;
+	height: 250px;
+	width: 460;
 	font-size: 9px;
 	color: #666;
 	font-weight: normal;
-	margin: 100px 0 0 0;
 }
 #map a {
 	color: #666;
