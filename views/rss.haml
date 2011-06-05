@@ -5,8 +5,12 @@
         %link= BASE_URL+"/events"
         %description James Bond Goldfinger movie
         <atom:link href="http://movietrail.heroku.com/events" rel="self" type="application/rss+xml" />
-            - @events.each do |e|
-              %item
+        - @events.each do |e|
+            %item
                 %title= "#{e.type} #{e.crew}"
                 %link= BASE_URL+"/events/#{e.id}"
-                %description= "@#{e.crew} #{e.content}"
+                - if e.is_actor?
+                    %description= "@#{e.crew} #{e.content}"
+                - else
+                    %description= e.content
+  

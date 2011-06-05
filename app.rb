@@ -41,7 +41,7 @@ class App < Sinatra::Base
     content_type 'application/rss+xml'
 
     @cast = CAST
-    @events = @trail.events(nil)
+    @events = @trail.events(params[:id])
     haml(:rss, :format => :xhtml, :escape_html => true, :layout => false)
   end
   
