@@ -137,7 +137,7 @@ body{
 	height: 150px;
 }
 .selected {
-	background-color: red;
+	background-color: #CCFF33;
 }
 .movie {
 	padding: 20px 15px 10px 15px;

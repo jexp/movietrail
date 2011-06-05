@@ -1,3 +1,7 @@
+OpenLayers.Feature.Vector.style['default']['fillColor'] = '#f60';
+OpenLayers.Feature.Vector.style['default']['pointRadius'] = '10';
+OpenLayers.Feature.Vector.style['default']['strokeColor'] = '#f60';
+OpenLayers.Feature.Vector.style['default']['strokeWidth'] = '1';
 var animation, animationIndex = 0,
 items = $(".stream-item"),
 
