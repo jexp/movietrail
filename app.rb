@@ -35,6 +35,16 @@ class App < Sinatra::Base
     haml :events
   end
   
+  BASE_URL = "http://movietrail.heroku.com"
+
+  get '/events.rss' do
+    content_type 'application/rss+xml'
+
+    @cast = CAST
+    @events = @trail.events(params[:id])
+    haml(:rss, :format => :xhtml, :escape_html => true, :layout => false)
+  end
+  
   get '/events.json' do 
     @trail.events(nil).collect{ |e| {:id => e.id, :type => e.type, :crew => e.crew, :content => e.content, :content_type => e.content_type, :times => e.times, :places => e.places, :people => e.people }}.to_json
   end
