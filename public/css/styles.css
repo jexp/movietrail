@@ -81,7 +81,8 @@ body{
 	
 }
 .night {
-	background-color: rgba(0, 0, 0, 0.25);
+	color: white;
+	background-color: #000;
 }
 .crew-image {
 	float: left;
@@ -93,6 +94,14 @@ body{
 }
 .stream-content {
 	margin: 0 0 0 58px;
+}
+
+.crew-image img {
+   width: 48px;
+}
+
+.people img {
+   height: 30px;
 }
 
 .movie-content {
@@ -137,7 +146,10 @@ body{
 	height: 150px;
 }
 .selected {
-	background-color: #CCFF33;
+	background-color: #FFFFCC;
+}
+.night.selected {
+	background-color: #FFCC00;
 }
 .movie {
 	padding: 20px 15px 10px 15px;
@@ -177,6 +189,16 @@ body{
 #map a:hover, #map:active {
 	color: #000;
 }
+
+#screenshot {
+	height: 250;
+	width: 460px;
+}
+
+#screenshot img {
+	width: 460px;
+}
+
 .logo {
 	font-size: 200%;
 	margin: 10px 0 20px 0;

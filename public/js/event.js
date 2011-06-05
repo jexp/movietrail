@@ -15,10 +15,10 @@ map.setBaseLayer(osm);
 map.zoomTo(1);
 map.addLayer(layer);
 new OpenLayers.Request.GET({
-	url: "places.json",
+	url: "../places.json",
 	success: function(response) {
 		places = JSON.parse(response.responseText);
-		startAnimation();
+//		startAnimation();
 	}
 });
 
