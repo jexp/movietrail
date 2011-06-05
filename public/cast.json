@@ -2,16 +2,14 @@
 		"keywords" : ["Auric Goldfinger","Auric","Goldfinger"],
 		"image": "http://ia.media-imdb.com/images/M/MV5BMTk2MzM0Mjc3M15BMl5BanBnXkFtZTcwNjMxNTgzNA@@._V1._SY30_SX23_.jpg"},
 "felix":{
-		"keywords" : ["Felix Leiter","Felix","Leiter"],
-		"image" : "http://i.media-imdb.com/images/SF9113d6f5b7cb1533c35313ccd181a6b1/tn15/no_photo.png"},
+		"keywords" : ["Felix Leiter","Felix","Leiter"]},
 "bond": { "keywords":["James Bond","James","Bond"],
 		  "image":"http://ia.media-imdb.com/images/M/MV5BMTIxNDY4MzQ0MV5BMl5BanBnXkFtZTYwMDk3MjM2._V1._SY30_SX23_.jpg"},
 "jill": { "keywords":["Jill Masterson","Jill"],
 "image": "http://ia.media-imdb.com/images/M/MV5BMTM1NjQ1MzM0OV5BMl5BanBnXkFtZTYwMzg5NjU2._V1._SY30_SX23_.jpg"},
 "m":{ "keywords":["M"],
 "image": "http://ia.media-imdb.com/images/M/MV5BMjA1NTc3MTAxMV5BMl5BanBnXkFtZTYwNTM5NjU2._V1._SY30_SX23_.jpg"},
-"solo":{ "keywords":["Martin Solo","Martin","Solo"],
-"image": "http://i.media-imdb.com/images/SF9113d6f5b7cb1533c35313ccd181a6b1/tn15/no_photo.png"},
+"solo":{ "keywords":["Martin Solo","Martin","Solo"]},
 "moneypenny":{ "keywords":["Miss Moneypenny","Moneypenny"],
 "image": "http://ia.media-imdb.com/images/M/MV5BMTIxMTM3MTQyNF5BMl5BanBnXkFtZTYwOTQ4NjU2._V1._SY30_SX23_.jpg"},
 "oddjob":{ "keywords":["Oddjob"],
@@ -20,8 +18,7 @@
 "image": "http://ia.media-imdb.com/images/M/MV5BMjExMDg4MDgwNF5BMl5BanBnXkFtZTYwNTA5NjU2._V1._SY30_SX23_.jpg"},
 "q":{ "keywords":["Q"],
 "image": "http://ia.media-imdb.com/images/M/MV5BMTg2Njk1OTkwNV5BMl5BanBnXkFtZTcwNzg4OTgwMw@@._V1._SY30_SX23_.jpg"},
-"simmons":{ "keywords":["Simmons"],
-"image": "http://i.media-imdb.com/images/SF9113d6f5b7cb1533c35313ccd181a6b1/tn15/no_photo.png"},
+"simmons":{ "keywords":["Simmons"] },
 "tilly":{ "keywords":["Tilly Masterson","Tilly"],
 "image": "http://ia.media-imdb.com/images/M/MV5BMjEyMTYwMzg2NF5BMl5BanBnXkFtZTcwOTMxNTgzNA@@._V1._SY30_SX23_.jpg"}
 }

@@ -54,6 +54,7 @@ module MovieTrail
     end
   
     def add(person)
+      person = person.downcase
       self.people << person unless self.people.include? person
     end
     
@@ -65,9 +66,7 @@ module MovieTrail
         self.people = []
       end
       unless analyzer.people.nil?
-        analyzer.people.each do |person|
-          self.people << person unless self.people.include? person
-        end
+        analyzer.people.each { |p| add(p) } 
       end
       time = analyzer.times.first
       self.time = time unless time.nil? || time == self.time
