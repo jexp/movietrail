@@ -40,7 +40,7 @@ var showItem = function(ele) {
 		layer.addFeatures([feature]);
 	}
 	$("#infoboard .info-item").html(ele);
-	$("#screenshot-image").attr("src", "/img/james-bond-007-goldfinger/" + Math.floor(ele[0].id / 10) +".jpg");
+	$("#screenshot-image").attr("src", "/img/james-bond-007-goldfinger/" + Math.floor(ele[0].id / 35) +".jpg");
 }
 $(".stream-item").click(function() {
 	if (null != selectedElement){

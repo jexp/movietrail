@@ -86,7 +86,7 @@ body{
 }
 .crew-image {
 	float: left;
-	height: 48px;
+	height: 60px;
 	margin-top: 3px;
 	overflow: hidden;
 	width: 48px;
@@ -142,14 +142,17 @@ body{
 	    padding: 8px 14px 12px;
 	    text-shadow: 0 1px 0 #FFFFFF;
 }
-#infoboard .info-item {
-	height: 150px;
+#infoboard .content {
+	height: 200px;
+	font-size: 16px;
+	line-height: 22px;
+	overflow: hidden;
 }
 .selected {
 	background-color: #FFFFCC;
 }
 .night.selected {
-	background-color: #FFCC00;
+	background-color: #B8860B;
 }
 .movie {
 	padding: 20px 15px 10px 15px;
@@ -160,7 +163,9 @@ body{
 	height: 128px;
 	min-width: 90px;
 	float: left;
-	background-image: url(http://cf1.imgobject.com/posters/c13/4bc90aca017a3c57fe003c13/goldfinger-cover.jpg);
+}
+.movie-poster img {
+	height: 128px;
 }
 .movie-details {
 	margin: 0 100px;
