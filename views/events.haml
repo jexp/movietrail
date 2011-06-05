@@ -1,0 +1,36 @@
+- index = 0
+.content-wrapper
+  .content-wrapper-inner
+    .movie
+      .movie-poster
+      .movie-details
+        .movie-title
+          = 'Goldfinger'
+    - @events.each do |e|
+      .stream-item{ :id => e.id, :class => e.times }
+        -if e.type == 'ACTOR'
+          %img.crew-image{ :src => @cast[e.crew.downcase] && @cast[e.crew.downcase]['image'] || "/img/no_photo.png", :title => e.crew }/
+          .stream-content
+            .crew
+              = e.crew
+              %span.place= e.places
+              %span.time= e.times
+              %span.place
+                - unless e.people.nil?
+                  - e.people.each do |p|
+                    %img{ :src => @cast[p] && @cast[p]['image'] ? @cast[p]['image'] : "/img/no_photo.png" , :title => p }/ 
+            .content
+              = e.content
+        - else
+          .movie-content
+            .crew
+              = e.crew
+              %span.place= e.places
+              %span.time= e.times
+              %span.place= e.people.inspect
+            .content
+              = e.content
+    #infoboard
+    .info-item
+      = 'Info-Inhalt'
+            

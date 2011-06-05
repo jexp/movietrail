@@ -1,6 +1,6 @@
 #map
 :javascript
-  var map = new OpenLayers.Map("map", {controls:[]}),
+  var map = new OpenLayers.Map("map", {}),
   osm = new OpenLayers.Layer.OSM("OSM"),
   places;
   map.addLayer(osm);	
@@ -42,8 +42,8 @@
     });
     map.addControl(animation);
     map.addLayers([layer]);
-    map.zoomToExtent(layer.getDataExtent());
-    animation.activate();
+    map.zoomTo(2);
+    //animation.activate();
   };
   new OpenLayers.Request.GET({
     url: "../places.json",
@@ -64,12 +64,13 @@
     .timeline
     - index = index + 1
   - time = scene.time
+  - timeposition = scene.time
   - people = scene.people
   - places = scene.places
-  %div{:id => "minute-#{time}"}
-    %span=places.join(", ")
-    %span=time
-    %ul
+  %div{:id => "minute-#{time}", :class => 'minute-box'}
+    %div.time=time
+    %div.place=places.join(", ")
+    %ul.cast-list
       - if people.any?
         - people.each do |person|
           %li=person
