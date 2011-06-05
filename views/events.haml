@@ -9,7 +9,7 @@
     - @events.each do |e|
       .stream-item{ :id => e.id, :class => e.times }
         -if e.type == 'ACTOR'
-          %img.crew-image{ :src => @cast[e.crew.downcase] && @cast[e.crew.downcase]['image'] || "/img/no_photo.png", :title => e.crew }/
+          %img.crew-image{ :src => face(e.crew), :title => e.crew }/
           .stream-content
             .crew
               = e.crew
@@ -18,7 +18,7 @@
               %span.place
                 - unless e.people.nil?
                   - e.people.each do |p|
-                    %img{ :src => @cast[p] && @cast[p]['image'] ? @cast[p]['image'] : "/img/no_photo.png" , :title => p }/ 
+                    %img{ :src => face(p) , :title => p }/ 
             .content
               = e.content
         - else
@@ -27,7 +27,10 @@
               = e.crew
               %span.place= e.places
               %span.time= e.times
-              %span.people= e.people.inspect
+              %span.place
+                - unless e.people.nil?
+                  - e.people.each do |p|
+                    %img{ :src => face(p) , :title => p }/ 
             .content
               = e.content
   #infoboard

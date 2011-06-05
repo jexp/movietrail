@@ -13,6 +13,17 @@ class App < Sinatra::Base
     @trail = MovieTrail.new
   end
 
+  NO_PHOTO = "/img/no_photo.png"
+
+  helpers do
+      def face(name)
+        name = name.downcase
+        return  NO_PHOTO unless @cast[name]
+        img = @cast[name]['image']
+        img ? img : NO_PHOTO
+      end
+    end
+
 	get '/' do
 		@timeline = @trail.timeline
     haml :index
