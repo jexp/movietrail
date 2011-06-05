@@ -60,39 +60,45 @@ OpenLayers.Control.Animation = OpenLayers.Class(OpenLayers.Control, {
 	},
 
 	/**
-	 * Method: activate
+	 * Method: start
 	 * Activates the control, the animation starts.
 	 */
-	activate: function(index) {
-		this.layer.removeAllFeatures();
-		if (index) {
-			for (var i = 0; i < index; i++) {
-				this.layer.addFeatures(this.features[i]);
-			}
-			this.index = index;
-		}
-		this.start();
+	start: function() {
+		this.stop();
+		this.play();
 	},
 
-	stop: function() {
+	pause: function() {
 		clearInterval(this.animation);
 	},
 
-	start: function() {
+	stop: function() {
+		this.index = 0;
+		this.layer.removeAllFeatures();
+	},
+
+	play: function() {
 		var that = this;
 		this.animation = setInterval(function() {
 			that.onShow(that.features[that.index]);
 			that.layer.addFeatures(that.features[that.index]);
 			if (!that.features[that.index+1]) {
 				if (that.loop) {
-					that.index = 0;
-					that.layer.removeAllFeatures();
+					that.stop();
 				} else {
 					clearInterval(that.animation);
 				}
 			}
 			that.index++;
 		}, this.delay);
+	},
+
+	jumpTo: function(index) {
+		this.stop();
+		for (var i = 0; i < index; i++) {
+			this.layer.addFeatures(this.features[i]);
+		}
+		this.index = index;
 	},
 
 	CLASS_NAME: "OpenLayers.Control.Animation"
