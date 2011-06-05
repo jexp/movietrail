@@ -3,47 +3,79 @@
 <title>MovieTrail</title>
 <style type="text/css">
 #map {
-	width: 1024px;
+	width: 800px;
 	height: 600px;
 	border: 1px solid black;
+	float: left;
+}
+#plot {
+	width: 300px;
+	height: 600px;
+	border: 1px solid black;
+	margin-left: 5px;
+	float: left;
 }
 </style>
 </head>
 <body>
 <div id="map"></div>
+<div id="plot"></div>
 <script type="text/javascript" src="OpenLayers.js"></script>
 <script type="text/javascript" src="Animation.js"></script>
 <script type="text/javascript">
-var map = new OpenLayers.Map("map"),
-osm = new OpenLayers.Layer.OSM("OSM");
-map.addLayer(osm);	
-map.setBaseLayer(osm);
-map.zoomTo(2);
-var displayPlaces = function(places) {
-	var i = 0, length = places.length, place, point,
-		layer = new OpenLayers.Layer.Vector();
-	for (; i < length; i++) {
-		place = places[i];
-		place = new OpenLayers.LonLat(place.longitude, place.latitude).transform(
-                    new OpenLayers.Projection("EPSG:4326"),
-                    map.getProjectionObject()
-                );
-		point = new OpenLayers.Geometry.Point(place.lon, place.lat);
-		layer.addFeatures([new OpenLayers.Feature.Vector(point)]);
-	}
-	map.addLayer(layer);
-};
-var request = new OpenLayers.Request.GET({
-	url: "../places.json",
-	success: function(response) {
-		var json = JSON.parse(response.responseText),
-			places = [];
-		for (place in json) {
-			places.push(json[place]);
-		}
-		displayPlaces(places);
-	}
-});
+  var map = new OpenLayers.Map("map", {controls:[]}),
+  osm = new OpenLayers.Layer.OSM("OSM"),
+  places;
+  map.addLayer(osm);	
+  map.setBaseLayer(osm);
+  var displayTimeline = function(times) {
+    var i = 0, length = times.length, place, point, points, feature,
+    layer = new OpenLayers.Layer.Vector();
+    for (; i < length; i++) {
+      place = places[times[i].places];
+      times[i].places = place;
+      if (!place || 0 == place.length) {
+        feature = new OpenLayers.Feature();
+        feature.data = times[i];
+        layer.addFeatures([feature]);
+      } else {
+        points = [];
+        point = new OpenLayers.LonLat(place.latitude, place.longitude).transform(
+          new OpenLayers.Projection("EPSG:4326"),
+          map.getProjectionObject()
+        );
+        point = new OpenLayers.Geometry.Point(point.lon, point.lat);
+        points.push(point);
+        feature = new OpenLayers.Feature.Vector(new OpenLayers.Geometry.MultiPoint(points));
+        feature.data = times[i];
+        layer.addFeatures([feature]);
+      }
+    };
+    var ele,
+    animation = new OpenLayers.Control.Animation(layer, {
+      delay: 100,
+      onShow: function(feature) {
+        document.getElementById("plot").innerHTML += "<div>" + feature.data.people + "</div>";
+      },
+      loop: true
+    });
+    map.addControl(animation);
+    map.addLayers([layer]);
+    map.zoomToExtent(layer.getDataExtent());
+    animation.start();
+  };
+  new OpenLayers.Request.GET({
+    url: "../public/places.json",
+    success: function(response) {
+      places = JSON.parse(response.responseText);
+      new OpenLayers.Request.GET({
+        url: "http://localhost:9292/timeline",
+        success: function(response) {
+          displayTimeline(JSON.parse(response.responseText));
+        }
+      });
+    }
+  });
 </script>
 </body>
 </html>

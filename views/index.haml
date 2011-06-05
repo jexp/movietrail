@@ -30,7 +30,7 @@
     };
     var ele,
     animation = new OpenLayers.Control.Animation(layer, {
-      delay: 100,
+      delay: 500,
       onShow: function(feature) {
         if (ele) {
           ele.setAttribute("style", "");
@@ -42,8 +42,8 @@
     });
     map.addControl(animation);
     map.addLayers([layer]);
-    map.zoomTo(2);
-    //animation.activate();
+    map.zoomToExtent(layer.getDataExtent());
+    animation.start();
   };
   new OpenLayers.Request.GET({
     url: "../places.json",

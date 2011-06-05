@@ -133,6 +133,9 @@ body{
 	    padding: 8px 14px 12px;
 	    text-shadow: 0 1px 0 #FFFFFF;
 }
+.selected {
+	background-color: red;
+}
 .movie {
 	padding: 20px 15px 10px 15px;
 	border-bottom: 1px solid #EBEBEB;
