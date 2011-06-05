@@ -76,6 +76,13 @@ body{
 	outline: medium none;
 	position: relative;
 }
+
+.day {
+	
+}
+.night {
+	background-color: rgba(0, 0, 0, 0.25);
+}
 .crew-image {
 	float: left;
 	height: 48px;
@@ -86,6 +93,11 @@ body{
 }
 .stream-content {
 	margin: 0 0 0 58px;
+}
+
+.movie-content {
+	margin: 0 0 0 58px;
+	text-align: right;
 }
 .crew {
 	font-weight: bold;
@@ -130,7 +142,7 @@ body{
 	height: 128px;
 	min-width: 90px;
 	float: left;
-	background: #EEE;
+	background-image: url(http://cf1.imgobject.com/posters/c13/4bc90aca017a3c57fe003c13/goldfinger-cover.jpg);
 }
 .movie-details {
 	margin: 0 100px;

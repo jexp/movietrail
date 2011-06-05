@@ -40,7 +40,6 @@ module MovieTrail
           if line =~ /----(\d+)\./
             if !scene_text.empty?
               scene = Scene.new($1,scene_text)
-              puts scene
               scenes << scene
             end
             scene_text = ""

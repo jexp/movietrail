@@ -1,9 +1,9 @@
 CAMERA# GUN BARREL LOGO
-ACTION# An animated white dot moves in from frame-left and centres on frame-right.  Iris veins surround the dot to fill the frame.  A MAN enters the dot walking from right to left, the iris moving to centre-frame with him.  He jumps to face f.g., pointing a gun and shooting.  Red colour falls in f.g. from the top of the frame.  The iris wanders then starts to fall to bottom-frame.  The iris and man fade out and the dot gets smaller.
+ACTION# An animated white dot moves in from frame-left and centres on frame-right.  Iris veins surround the dot to fill the frame.  A MAN enters the dot walking from right to left, the iris moving to centre-frame with him.  He jumps to face foreground, pointing a gun and shooting.  Red colour falls in foreground from the top of the frame.  The iris wanders then starts to fall to bottom-frame.  The iris and man fade out and the dot gets smaller.
 CUT# IRIS CUTS OUT.
 CAMERA# FADE IN:
 CAMERA# EXT. RAMIREZ' WAREHOUSE - NIGHT
-ACTION# In a VERY LONG SHOT, TWO GUARDS patrol past enormous oil storage tanks.  PULL BACK to reveal an outer rock wall.  It obscures the men.  CRANE DOWN to reveal a harbour.  A seagull swims by in f.g.
+ACTION# In a VERY LONG SHOT, TWO GUARDS patrol past enormous oil storage tanks.  PULL BACK to reveal an outer rock wall.  It obscures the men.  CRANE DOWN to reveal a harbour.  A seagull swims by in foreground
 CAMERA# CLOSE SHOT - THE SEAGULL
 ACTION# rises out of the water revealing Bond in a black diving suit.  The seagull is a decoy atop his head.  Bond grips the bottom rung of a ladder.
 CAMERA# WIDER SHOT - BOND
@@ -25,11 +25,11 @@ ACTION# feels behind the cover.  A door in the side of the tank swings open.  Bo
 CAMERA# INT. STORAGE TANK - SAME TIME
 ACTION# Bond enters, closes the door behind him and turns on the lights.
 CAMERA# WIDE ANGLE
-ACTION# There are poppy pods in f.g., a desk and numerous boxes.  DOLLY BACK and PAN on Bond as he moves to the centre of the room.
+ACTION# There are poppy pods in foreground, a desk and numerous boxes.  DOLLY BACK and PAN on Bond as he moves to the centre of the room.
 CAMERA# CLOSE SHOT - BOND
 ACTION# looks around.
 CAMERA# WIDE ANGLE
-CAMERA# DOLLY IN as Bond takes off a plastic tubular belt and walks to three drums in f.g. labeled "NITRO."  He holds the belt over the first drum.
+CAMERA# DOLLY IN as Bond takes off a plastic tubular belt and walks to three drums in foreground labeled "NITRO."  He holds the belt over the first drum.
 CAMERA# ANGLE ON THE FIRST DRUM
 ACTION# Bond squeezes a white jelly from the belt onto the drum.  He moves to the next drum.  He squirts more jelly onto it.  Then he takes off his backpack, sets it on a drum, opens it and takes out a timer with wires leading to a primer.
 CAMERA# CLOSE ON THE TIMER
@@ -158,7 +158,7 @@ ACTION# He walks to his jacket, reaches for it, then hears a female groan and lo
 CAMERA# BONITA
 ACTION# is on the floor trying to raise herself.
 CAMERA# ANGLE ON BOND
-ACTION# as we see Bonita and Capungo's upturned feet in f.g.
+ACTION# as we see Bonita and Capungo's upturned feet in foreground
 ACTOR# BOND
 SPEECH# Positively shocking.
 ACTION# He puts on his coat and goes out the door, closing it sharply behind him.
@@ -179,7 +179,7 @@ ACTION# The man splashes into the water, then a GIRL swims by.  PAN OVER to reve
 CAMERA# EXT. HOTEL POOL - DAY
 ACTION# A bevy of girls sunbathe there.  Felix walks past them looking around and approaches a row of cabanas.
 CAMERA# CLOSER ANGLE
-CAMERA# PAN on Felix as he walks into f.g. then hears voices:
+CAMERA# PAN on Felix as he walks into foreground then hears voices:
 ACTOR# DINK
 SPEECH# How's this?
 ACTOR# BOND
@@ -503,36 +503,36 @@ CAMERA# ANGLE ON THE BED
 ACTION# Bond rolls over and answers the phone.
 ACTOR# BOND
 SPEECH# Hello.
-ACTOR# FELIX (over phone
+ACTOR# FELIX
 SPEECH# Leiter here.
 ACTOR# BOND
 SPEECH# Oh, Felix.
 ACTION# He swings his legs off the bed.
-ACTOR# FELIX (over phone
+ACTOR# FELIX
 SPEECH# Well, now?
 ACTOR# BOND
 SPEECH# Uh, what's that?
 ACTION# Jill rises behind him, puts her chin on his shoulder and rubs a lock of her hair against her ear.
 ACTOR# BOND
 SPEECH# Dinner?  Uh, no.  Look, I'm sorry, I can't.  Something big's come up.
-ACTOR# FELIX (over phone
+ACTOR# FELIX
 SPEECH# Right.
 ACTION# Bond scratches his ear and pushes the hair away.
 ACTOR# BOND
 SPEECH# Uh, how about breakfast?
-ACTOR# FELIX (over phone
+ACTOR# FELIX
 SPEECH# Okay.
 ACTOR# JILL
 EMOTION# whispering into Bond's
 SPEECH# 	 ear
 SPEECH# Not too early.
 ACTION# Bond cups a hand over the phone, plants his other hand on her face and shoves her back.  PAN on her as she lands on the bed smiling and pulls her shirt down.
-ACTOR# FELIX (over phone
+ACTOR# FELIX
 SPEECH# I'll call you around nine.
 ACTOR# BOND
 SPEECH# Yes, nine o'clock will be fine.
 CAMERA# ANGLE ON BOND
-ACTOR# FELIX (over phone
+ACTOR# FELIX
 SPEECH# So long, James.
 ACTOR# BOND
 SPEECH# Good night, Felix.
@@ -571,7 +571,7 @@ ACTION# The hand gives Bond a sharp karate chop on the neck, knocking him to the
 CAMERA# ANGLE ON THE WALL
 ACTION# The man's shadow appears on wood paneling on the kitchen wall.  He turns sideways.  He is thickly built and sports a bowler hat.  He is ODDJOB.
 CAMERA# WIDER ANGLE
-ACTION# As Bond lies unconscious in f.g., the shadow on the wall moves away.
+ACTION# As Bond lies unconscious in foreground, the shadow on the wall moves away.
 CUT# SLOW DISSOLVE TO:
 CAMERA# INT. BOND'S HOTEL KITCHEN - NIGHT
 ACTION# Bond and the champagne bottle lie on the floor.
@@ -606,15 +606,15 @@ CAMERA# JILL'S LEGS
 ACTION# which are completely painted gold.
 CAMERA# ANGLE ON BOND
 ACTION# waiting for a response.  Then:
-ACTOR# FELIX' VOICE (over phone
+ACTOR# FELIX' VOICE
 SPEECH# Hello?
 ACTOR# BOND
 SPEECH# Hello, Felix?  Get over here right away.
-ACTOR# FELIX (over phone
+ACTOR# FELIX
 SPEECH# What's up?
 ACTOR# BOND
 SPEECH# The girl's dead.
-ACTOR# FELIX (over phone
+ACTOR# FELIX
 EMOTION# in alarm
 SPEECH# Dink?
 ACTOR# BOND
@@ -623,10 +623,10 @@ CUT# DISSOLVE TO:
 ACTION# A BLUE SKY
 ACTION# dotted with clouds.  TILT DOWN to reveal
 CAMERA# EXT. LONDON - DAY
-ACTION# Big Ben and Westminster Palace in f.g.
+ACTION# Big Ben and Westminster Palace in foreground
 CUT# CUT TO:
 CAMERA# INT. "M'S" OFFICE - DAY
-ACTION# Bond stands at attention in f.g., M in b.g. by a window looking at him.
+ACTION# Bond stands at attention in foreground, M in b.g. by a window looking at him.
 ACTOR# M
 SPEECH# Gold?  All over?
 ACTOR# BOND
@@ -788,7 +788,7 @@ ACTOR# BOND
 SPEECH# I think it's time Mister Goldfinger and I met ‑- socially, of course.
 ACTOR# SMITHERS
 SPEECH# I was hoping you'd say that.
-ACTION# Smithers rises.  PAN on him as he walks off frame, leaving M in f.g.
+ACTION# Smithers rises.  PAN on him as he walks off frame, leaving M in foreground
 ACTOR# M
 SPEECH# It might lead to a business talk ‑- Mister Goldfinger's kind of business.
 CAMERA# BOND
@@ -968,14 +968,14 @@ CAMERA# MEDIUM SHOT - BOND
 ACTION# looks back chagrined.
 CUT# DISSOLVE TO:
 CAMERA# EXT. GOLF CLUB - ESTABLISHING SHOT - DAY
-ACTION# A golf shop and large hotel are in b.g.  GOLFERS walk past in f.g. pulling wheeled golf carts.  A gold Rolls Royce is parked near the hotel, and beyond it Bond's Aston-Martin.
+ACTION# A golf shop and large hotel are in b.g.  GOLFERS walk past in foreground pulling wheeled golf carts.  A gold Rolls Royce is parked near the hotel, and beyond it Bond's Aston-Martin.
 CAMERA# INT. GOLF SHOP - DAY - SAME TIME
-ACTION# The proprietor, BLACKING, winds tape around a golf club in f.g.  Goldfinger walks in.  He is dressed like his name:  brown coat over a yellow sweater, brown striped tie, brown golfing pants and shoes, and he holds a matching brown cap.
+ACTION# The proprietor, BLACKING, winds tape around a golf club in foreground  Goldfinger walks in.  He is dressed like his name:  brown coat over a yellow sweater, brown striped tie, brown golfing pants and shoes, and he holds a matching brown cap.
 ACTOR# GOLDFINGER
 SPEECH# Ready, Blacking?
 ACTOR# BLACKING
 SPEECH# Yes, sir.
-CAMERA# DOLLY BACK to reveal Bond in f.g.  He wears a purple sweater and black slacks and is looking at a rack of golf clubs.
+CAMERA# DOLLY BACK to reveal Bond in foreground  He wears a purple sweater and black slacks and is looking at a rack of golf clubs.
 ACTOR# BLACKING
 EMOTION# to Goldfinger
 SPEECH# Uh, there's an old member dropped by, sir.  Same handicap as yours.  I wondered if you would rather play with him?
@@ -1044,7 +1044,7 @@ CAMERA# PAN on him as he walks to the hole, revealing Goldfinger approaching wit
 ACTOR# GOLDFINGER
 SPEECH# This meeting is not a coincidence, eh?
 CAMERA# CLOSER ANGLE
-ACTION# Goldfinger and Bond stand in f.g., with Oddjob and Hawking standing in b.g. on opposite sides.  Goldfinger leans down with his putter.
+ACTION# Goldfinger and Bond stand in foreground, with Oddjob and Hawking standing in b.g. on opposite sides.  Goldfinger leans down with his putter.
 ACTOR# GOLDFINGER
 SPEECH# What's your game, Mister Bond?
 CAMERA# INTERCUT
@@ -1180,7 +1180,7 @@ ACTOR# BOND
 SPEECH# Successfully, too.
 ACTION# He and Hawker walk off.
 CAMERA# WIDE ANGLE
-ACTION# Goldfinger walks to Oddjob in f.g.  Meanwhile Bond and Hawker walk toward the trees in b.g., looking around.
+ACTION# Goldfinger walks to Oddjob in foreground  Meanwhile Bond and Hawker walk toward the trees in b.g., looking around.
 ACTION# Goldfinger looks down at "his" ball, which lays inches from the fairway.  It is marked "Slazenger 1."
 ACTOR# GOLDFINGER
 SPEECH# Slazenger Number One.  Good.
@@ -1211,7 +1211,7 @@ EMOTION# looking off
 SPEECH# Let's have a little fun with Mister Goldfinger.
 ACTION# He slips the ball into his pocket.
 CAMERA# WIDE ANGLE
-ACTION# Goldfinger, in f.g. with his back to us, swings his club strongly then walks forward.
+ACTION# Goldfinger, in foreground with his back to us, swings his club strongly then walks forward.
 CUT# DISSOLVE TO:
 CAMERA# LONG SHOT - AT THE 17TH HOLE
 ACTION# Bond's ball lays inches from the cup, Goldfinger's a few yards away.  Bond approaches his ball.
@@ -1302,7 +1302,7 @@ ACTION# Goldfinger glares up at Oddjob.  Oddjob looks back without expression.
 ACTION# Goldfinger hurls his ball to the ground and walks off as Bond smiles.   Hawker approaches with the flag, grinning broadly, and plants it beside the hole.
 CUT# DISSOLVE TO:
 CAMERA# EXT. CLUBHOUSE - DAY
-ACTION# The gold Rolls Royce sits in f.g., beyond it Bond's Aston-Martin.  A number of statues adorn the clubhouse façade.
+ACTION# The gold Rolls Royce sits in foreground, beyond it Bond's Aston-Martin.  A number of statues adorn the clubhouse façade.
 CAMERA# PAN on Oddjob as walks to the Rolls' trunk carrying Goldfinger's golf bag, revealing Bond dressed in a brown suit looking on with his hands in his pockets.  Oddjob sets the bag in the trunk and backs away.
 CAMERA# DOLLY IN on Bond as he approaches the trunk.  He takes a Homer from his pocket, primes it and plants it inside the trunk.
 CAMERA# FOLLOWING ODDJOB
@@ -1378,7 +1378,7 @@ ACTION# Goldfinger motions to Oddjob, who hands their tickets to a STEWARDESS at
 CAMERA# AT THE STOP OF THE STEPS
 ACTION# Goldfinger takes off his hat as he passes a STEWARDESS at the top of the steps and enters the passenger compartment.  Oddjob follows keeping his hat on.
 CAMERA# WIDE ANGLE
-CAMERA# CRANE BACK from the plane to reveal the Aston-Martin in f.g. and Bond behind the wheel looking at the scope, as we hear an announcement:
+CAMERA# CRANE BACK from the plane to reveal the Aston-Martin in foreground and Bond behind the wheel looking at the scope, as we hear an announcement:
 ACTOR# AIRPORT ANNOUNCER
 EMOTION# over loudspeaker
 SPEECH# British United Air-ferries announce the departure of their DS-400 flight to Geneva.
@@ -1446,12 +1446,12 @@ ACTION# He keeps driving, his expression impatient.
 CAMERA# ANGLE ON THE ROAD
 ACTION# The Aston-Martin continues up the road.
 CAMERA# EXT. FLOWER STALL - VERY HIGH ANGLE - DAY
-ACTION# Oddjob stands beside the Rolls as Goldfinger approaches the children.  SLOWLY ZOOM BACK to an extreme long shot revealing a much higher road in f.g.
+ACTION# Oddjob stands beside the Rolls as Goldfinger approaches the children.  SLOWLY ZOOM BACK to an extreme long shot revealing a much higher road in foreground
 ACTION# Bond's car has stopped on the high road and he gets out and looks down at Goldfinger.
 CAMERA# GOLDFINGER
 ACTION# turns away from the flower stall eating an orange.  Oddjob, behind him (in a process shot), approaches the children again.
 CAMERA# VERY HIGH ANGLE - BOND
-ACTION# He stands on the high road looking down at Goldfinger.  SLOWLY ZOOM BACK to an even longer shot revealing an even higher road in f.g.
+ACTION# He stands on the high road looking down at Goldfinger.  SLOWLY ZOOM BACK to an even longer shot revealing an even higher road in foreground
 ACTION# A rifle barrel comes into view, aiming below, and then Tilly, lying prone and bracing the rifle on a boulder.  She fires.
 CAMERA# ANGLE ON BOND
 ACTION# The bullet strikes the pavement right in front of him.  He ducks down then lies flat behind his car.
@@ -1557,7 +1557,7 @@ ACTOR# TILLY
 EMOTION# suddenly points
 SPEECH# There's a garage.
 CAMERA# EXT. GARAGE - DAY - SAME TIME
-ACTION# Bond's car drives in front b.g. and stops in f.g.  Tilly immediately opens her door and gets out.  She walks past the gas pumps toward the office.
+ACTION# Bond's car drives in front b.g. and stops in foreground  Tilly immediately opens her door and gets out.  She walks past the gas pumps toward the office.
 ACTOR# TILLY
 EMOTION# calling
 SPEECH# Fraulein!
@@ -1636,7 +1636,7 @@ ACTION# Goldfinger's Rolls is partially dismantled.  WORKERS ‑- all of them we
 CAMERA# BOND
 ACTION# tilts the louvers so he can have a better view.  He looks inside again.
 CAMERA# BOND'S POV - INT. FACTORY - SAME TIME
-ACTION# The Roll's grill is in f.g.  A worker removes one of the golden headlamps, walks back and sets it down.  Meanwhile two others remove one of the golden doors, carry it back and set it down.
+ACTION# The Roll's grill is in foreground  A worker removes one of the golden headlamps, walks back and sets it down.  Meanwhile two others remove one of the golden doors, carry it back and set it down.
 ACTION# At the same time, Goldfinger and LING ‑- a Chinese operative in a Mao jacket ‑- approach from b.g.:
 ACTOR# GOLDFINGER
 SPEECH# Smuggling is an art, Mister Ling...
@@ -1819,7 +1819,7 @@ ACTION# Oddjob steps forward.
 ACTION# Bond rises and runs off.
 ACTION# WIDER ANGLE:  PAN on Bond as he runs into the woods, then Oddjob comes into view.  He strides forward, following, then a Korean guard follows him.
 CAMERA# ANGLE ON TILLY
-ACTION# She lies in f.g.  Bond approaches and feels her neck.  DOLLY IN as he turns her onto her back.  He feels her wrist.
+ACTION# She lies in foreground  Bond approaches and feels her neck.  DOLLY IN as he turns her onto her back.  He feels her wrist.
 CAMERA# CLOSE SHOT - BOND
 ACTION# He leans back realizing she is dead.
 CAMERA# BOND'S POV - TILLY
@@ -1832,7 +1832,7 @@ SPEECH# 	 others
 SPEECH# Aagh!  Aagh!
 ACTION# The others step forward.
 CAMERA# WIDER ANGLE
-ACTION# The Koreans lift Tilly's body and carry it off as Bond rises.  Meanwhile Oddjob crosses in f.g. and picks up his hat.
+ACTION# The Koreans lift Tilly's body and carry it off as Bond rises.  Meanwhile Oddjob crosses in foreground and picks up his hat.
 CAMERA# ANGLE ON THE WOODS
 CAMERA# PAN as guards lead Bond back to his Aston-Martin.  One of them aims a pistol at him, yells in Korean and gets into the passenger seat.  Bond climbs into the driver's seat.  They both close their doors.  Bond revs the engine and backs up.
 CUT# DISSOLVE TO:
@@ -1894,7 +1894,7 @@ ACTION# THREE OTHER KOREANS: fire at him as he races past them.  He continues pa
 ACTION# Bond looks through his bullet-strewn windshield.
 ACTION# WIDE ANGLE:  The Aston-Martin nearly runs into other Koreans, then veers to the side.
 ACTION# A FACTORY ROAD:  The Aston-Martin rounds the corner of a building in b.g. and races forward.  PAN on it as it veers left, knocking over drums and boxes.
-ACTION# ON THE ROAD:  A Mercedes round the same corner and nearly runs over three Koreans in f.g., who dive aside, then veers left after Bond.
+ACTION# ON THE ROAD:  A Mercedes round the same corner and nearly runs over three Koreans in foreground, who dive aside, then veers left after Bond.
 ACTION# Bond keeps driving.
 ACTION# TRUCKING SHOT:  The Aston-Martin races forward at incredible speed, rounding the corners of buildings.
 ACTION# Bond looks ahead.
@@ -1997,7 +1997,7 @@ SPEECH# The purpose of our two previous encounters is now very clear to me.  I d
 ACTION# Goldfinger turns away.
 ACTION# Bond looks from Goldfinger to a spot between his legs.  The laser beam keeps cutting upwards toward his crotch.
 CAMERA# WIDE SHOT
-ACTION# Bond lies in f.g. on the table as Goldfinger starts walking up the steps to the control booth, his left hand in his pocket.
+ACTION# Bond lies in foreground on the table as Goldfinger starts walking up the steps to the control booth, his left hand in his pocket.
 ACTOR# BOND
 SPEECH# Do you expect me to talk?
 CAMERA# GOLDFINGER
@@ -2039,7 +2039,7 @@ ACTION# Bond looks again at the tabletop.  The beam keeps cutting.
 ACTION# Goldfinger continues consulting with the others.
 ACTION# Bond looks down at the beam.  It is almost at his crotch.  Bond looks up.
 CAMERA# WIDE ANGLE
-ACTION# Bond in f.g. again, Goldfinger beyond in the control room.  Goldfinger turns to Bond.
+ACTION# Bond in foreground again, Goldfinger beyond in the control room.  Goldfinger turns to Bond.
 ACTOR# GOLDFINGER
 SPEECH# Two words you may have overheard which cannot possibly have any significance to you or anyone in your organization.
 ACTION# As Goldfinger talks, Bond looks in exasperation at the approaching laser beam.  It slices easily through the metal.  Goldfinger steps forward smugly.
@@ -2054,7 +2054,7 @@ ACTION# looks up at the laser gun then down at his legs.
 ACTOR# GOLDFINGER
 SPEECH# You are quite right, Mister Bond.  You are worth more to me alive.
 CAMERA# WIDE ANGLE
-ACTION# As Bond lies in f.g. and Goldfinger looks on, Kisch approaches the table.
+ACTION# As Bond lies in foreground and Goldfinger looks on, Kisch approaches the table.
 ACTION# Bond looks up at Kisch, then Goldfinger, then Kisch.  Kisch raises a large pistol and points it at Bond's chest.
 ACTION# Goldfinger looks on smugly as Kisch aims.
 ACTION# Kisch fires the pistol; it makes a thumping sound.  Bond's head lowers to the tabletop.
@@ -2241,7 +2241,7 @@ M hurries to his desk, flips off the intercom, sits and picks up the phone.
 ACTOR# M
 EMOTION# into phone
 SPEECH# M here.
-ACTOR# FELIX (over phone
+ACTOR# FELIX
 SPEECH# Leiter, sir.
 ACTOR# M
 SPEECH# Leiter!
@@ -2518,7 +2518,7 @@ CAMERA# BOND
 ACTION# suddenly jumps down.  He grabs the guard from behind.  They tussle and fall to the floor.
 ACTION# They struggle for the gun.  Bond slams the guard's hand against the bed frame and the gun falls.
 ACTION# The guard shoves Bond against the wall.  Bond kicks him under the chin and the guard falls flat on his back.
-CAMERA# ZIP PAN over to the gun under the cot.  Bond takes the gun and his jacket and backs out of the cell as the guard lies unconscious in f.g.
+CAMERA# ZIP PAN over to the gun under the cot.  Bond takes the gun and his jacket and backs out of the cell as the guard lies unconscious in foreground
 CAMERA# IN THE CORRIDOR
 ACTION# Bond shuts the cell door behind him, lays the key on a pile of rags and walks down the corridor putting on his jacket.
 ACTION# As he nears the end of the corridor, we see a basement control room ahead containing a hydraulic lift and we hear voices from above:
@@ -3136,7 +3136,7 @@ ACTION# A plane passes over another group of soldiers.  They collapse.
 ACTION# A PLANE
 ACTION# flies over a building.
 CAMERA# ON ANOTHER FIELD
-ACTION# A group of soldiers in f.g. collapse.  Then a row of soldiers behind them doing calisthenics drop to the ground.
+ACTION# A group of soldiers in foreground collapse.  Then a row of soldiers behind them doing calisthenics drop to the ground.
 CAMERA# POV FROM THE COCKPIT
 ACTION# The plane rises from the soldiers into the air.
 CAMERA# ANOTHER PLANE
@@ -3229,7 +3229,7 @@ CAMERA# INT. FORT KNOX - RECEPTION AREA - DAY - SAME TIME
 ACTION# The door falls to the floor and is dragged away by the ambulance.  Kisch enters and moves to another door as guards run past him.
 ACTION# Two guards take a trolley; another runs upstairs to a control room; another poses with a machine gun.  The guards with the trolley run outside with it as Kisch presses a button and opens another door.
 CAMERA# EXT. FRONT OF FORT KNOX - SAME TIME
-ACTION# A group of collapsed soldiers lie in a jeep in f.g. as a helicopter flies across the fort.  Bond and Oddjob look up at it.
+ACTION# A group of collapsed soldiers lie in a jeep in foreground as a helicopter flies across the fort.  Bond and Oddjob look up at it.
 CAMERA# AT THE SIDE OF THE FORT
 ACTION# The helicopter passes over the building.
 CAMERA# IN THE RECEPTION AREA
@@ -3402,7 +3402,7 @@ ACTION# The guards run back into the reception area.
 ACTION# The soldiers run to the entryway and start to fire inside.  PAN over to show the guards falling.
 CAMERA# INT. VAULT - SAME TIME - SERIES OF SHOTS
 ACTION# Bond slides on his back along the floor, landing near another mechanized dolly loaded with gold bars.
-ACTION# WIDER ANGLE:  Bond grabs a metal lever on the dolly as Oddjob watches in f.g.
+ACTION# WIDER ANGLE:  Bond grabs a metal lever on the dolly as Oddjob watches in foreground
 ACTION# CLOSER ANGLE:  Bond pulls off the lever.
 ACTION# PAN on Oddjob as he positions himself to face him.
 ACTION# Bond approaches him, raising the lever, and swings it at his head.  Oddjob ducks, avoiding it.  Bond raises the lever again.  Oddjob grabs his arm and squeezes it and the lever drops.  Then Oddjob grabs Bond under the arm.
@@ -3458,9 +3458,9 @@ ACTION# Bond places an ingot under the lid and hammers on it from below with the
 CAMERA# THE TIMER
 ACTION# clicks down from "049" to "047."
 CAMERA# INT. RECEPTION AREA - SAME TIME
-ACTION# Korean guards in f.g. fire at the entryway.
+ACTION# Korean guards in foreground fire at the entryway.
 CAMERA# CLOSER ANGLE - THE ENTRYWAY
-ACTION# A soldier runs past the entryway lobbing a hand grenade inside as other soldiers run behind him.  The grenade explodes in f.g.
+ACTION# A soldier runs past the entryway lobbing a hand grenade inside as other soldiers run behind him.  The grenade explodes in foreground
 CAMERA# STILL CLOSER
 ACTION# A SOLDIER runs in and mounts the stairs to the control room.
 CAMERA# ANGLE ON KOREANS
@@ -3698,7 +3698,7 @@ ACTION# Pussy keeps pulling back on the stick.
 CAMERA# IN THE CABIN
 ACTION# Bond struggles to his feet and starts moving toward the cockpit.
 CAMERA# INT. HANGAR - DAY - SAME TIME
-ACTION# The three crewmen, still bound and gagged, now lie unconscious in f.g.  An ARMY OFFICER in the entryway waves outside.  Felix and Johnnie run in and all three run toward the crewmen.
+ACTION# The three crewmen, still bound and gagged, now lie unconscious in foreground  An ARMY OFFICER in the entryway waves outside.  Felix and Johnnie run in and all three run toward the crewmen.
 CAMERA# INT. CABIN - SAME TIME
 ACTION# Bond has almost reached the cockpit.
 CAMERA# IN THE COCKPIT - SAME TIME

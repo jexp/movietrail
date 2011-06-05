@@ -7,17 +7,27 @@
         .movie-title
           = 'Goldfinger'
     - @events.each do |e|
-      -if e.type == 'ACTOR'
-        .stream-item
-          .crew-image
+      .stream-item{ :id => e.id, :class => e.times }
+        -if e.type == 'ACTOR'
+          %img.crew-image{ :src => @cast[e.crew.downcase] && @cast[e.crew.downcase]['image'] }
           .stream-content
             .crew
               = e.crew
-              %span.place= e.places.first
+              %span.place= e.places
               %span.time= e.times
+              %span.place= e.people
             .content
               = e.content
-  #infoboard
+        - else
+          .movie-content
+            .crew
+              = e.crew
+              %span.place= e.places
+              %span.time= e.times
+              %span.place= e.people
+            .content
+              = e.content
+    #infoboard
     .info-item
       = 'Info-Inhalt'
             

@@ -13,18 +13,19 @@ class App < Sinatra::Base
     @trail = MovieTrail.new
   end
 
-		get '/' do
-			@timeline = @trail.timeline
+	get '/' do
+		@timeline = @trail.timeline
     haml :index
   end
 
   get '/events' do
+    @cast = CAST
     @events = @trail.events(nil)
     haml :events
   end
   
   get '/events.json' do 
-    @trail.events(nil).collect{ |e| {:id => e.id, :type => e.type, :crew => e.crew, :content => e.content, :content_type => e.content_type, :times => e.times, :places => e.places }}.to_json
+    @trail.events(nil).collect{ |e| {:id => e.id, :type => e.type, :crew => e.crew, :content => e.content, :content_type => e.content_type, :times => e.times, :places => e.places, :people => e.people }}.to_json
   end
   
   get '/timeline' do

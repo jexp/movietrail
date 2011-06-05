@@ -3,11 +3,12 @@ require 'movietrail/node_ext'
 module MovieTrail
 
   CAST = JSON.parse(IO.read("public/cast.json"))
+  CAST_NAMES = Hash[CAST.collect { |name, data| [name, data['keywords']]}]
+  
   PLACES = JSON.parse(IO.read("public/places.json"))
   PLACE_NAMES = Hash[PLACES.collect { |name, data| [name, data['keywords']]}]
-  TIMES = { :day => ["day","daylight"], :morning => ["morning","breakfast","0?[789]:\d\d","sunrise"],
-    :night => ["midnight","night","dark","moon","stars"], :evening => ["diner","supper"], 
-    :noon => ["lunch","1[12]:\d\d"]}
+  TIMES = { :day => ["day","daylight","morning","breakfast",'0?[7-9]:\d\d','1[0-2]:\d\d',"sunrise","lunch","afternoon"],
+    :night => ["midnight","night","dark","moon","stars","diner","supper","sunset"]}
 
   class Analyzer
     
@@ -24,7 +25,7 @@ module MovieTrail
     end
     
     def people
-      scan_text_for(@text, CAST)
+      scan_text_for(@text, CAST_NAMES)
     end
 
     def scan_text_for(text,what)
